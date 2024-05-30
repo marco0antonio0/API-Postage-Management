@@ -181,6 +181,20 @@ project/
 - **Status Code:** 204 No Content
 - **Body:** (nenhum)
 
+## Documentação Swagger
+
+A documentação da API é gerada automaticamente pelo Swagger. Para acessar a documentação interativa da API, siga os passos abaixo:
+
+1. **Inicie o servidor de desenvolvimento** (caso ainda não tenha feito):
+
+    ```bash
+    npm run dev
+    ```
+
+2. **Acesse a documentação do Swagger no navegador**:
+
+    Abra seu navegador e acesse a URL `http://localhost:3000/api-docs`. A partir desta interface, você pode visualizar e testar todas as rotas da API.
+
 ## Contribuição
 
 Contribuições são bem-vindas! Por favor, siga os passos abaixo para contribuir:
