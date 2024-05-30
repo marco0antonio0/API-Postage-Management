@@ -4,24 +4,9 @@ import { helloController } from './example/example.controller';
 import { postController } from './postManager/post.controller';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
-import swaggerJsdoc from 'swagger-jsdoc';
-import fs from 'fs';
-import path from 'path';
 
-// Carregar swagger.json
-const swaggerFile = path.resolve(__dirname, '../netlify/functions/swagger.json');
-const swaggerData = fs.readFileSync(swaggerFile, 'utf8');
-const swaggerDocument = JSON.parse(swaggerData);
 
-// Configuração do swagger-jsdoc
-const options = {
-    swaggerDefinition: swaggerDocument,
-    apis: ['./app/controller/*.ts'], // Ajuste o caminho conforme necessário
-};
-
-const specs = swaggerJsdoc(options);
-
-export const AppModule = (app: Application) => {
+export const AppModule = (specs: any, app: Application) => {
     app.use(express.json());
 
     // Configurações do Swagger
