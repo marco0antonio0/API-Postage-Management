@@ -5,9 +5,18 @@ import { postController } from './postManager/post.controller';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
-import * as swaggerDocument from '../swagger.json';
+import fs from 'fs';
+import path from 'path';
 
-const specs = swaggerJsdoc(swaggerDocument);
+// Carregar swagger.json
+const swaggerFile = path.resolve(__dirname, '../swagger.json');
+const swaggerData = fs.readFileSync(swaggerFile, 'utf8');
+const swaggerDocument = JSON.parse(swaggerData);
+
+const specs = swaggerJsdoc({
+    swaggerDefinition: swaggerDocument,
+    apis: ['./app/controller/*.ts'],
+});
 
 export const AppModule = (app: Application) => {
     app.use(express.json());
