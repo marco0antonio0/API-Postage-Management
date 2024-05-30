@@ -5,7 +5,6 @@ import { postController } from './postManager/post.controller';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
-import cors from 'cors';
 
 // Definição do Swagger
 const swaggerDefinition = {
@@ -112,9 +111,6 @@ const specs = swaggerJsdoc({
 });
 export const AppModule = (app: Application) => {
     app.use(express.json());
-
-    // Middleware para permitir CORS
-    app.use(cors());
 
     // Configurações do Swagger
     app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
