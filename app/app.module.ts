@@ -13,10 +13,13 @@ const swaggerFile = path.resolve(__dirname, './swagger.json');
 const swaggerData = fs.readFileSync(swaggerFile, 'utf8');
 const swaggerDocument = JSON.parse(swaggerData);
 
-const specs = swaggerJsdoc({
+// Configuração do swagger-jsdoc
+const options = {
     swaggerDefinition: swaggerDocument,
-    apis: ['./app/controller/*.ts'],
-});
+    apis: ['./app/controller/*.ts'], // Ajuste o caminho conforme necessário
+};
+
+const specs = swaggerJsdoc(options);
 
 export const AppModule = (app: Application) => {
     app.use(express.json());
