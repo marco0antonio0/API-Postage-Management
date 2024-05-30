@@ -20,6 +20,10 @@ const swaggerDefinition = {
             url: 'http://localhost:3000',
             description: 'Servidor de Desenvolvimento',
         },
+        {
+            url: 'https://managerposts.netlify.app',
+            description: 'Servidor de Produção',
+        },
     ],
     paths: {
         '/api/posts': {
