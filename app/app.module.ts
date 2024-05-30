@@ -9,7 +9,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Carregar swagger.json
-const swaggerFile = path.resolve(__dirname, '../swagger.json');
+const swaggerFile = path.resolve(__dirname, './swagger.json');
 const swaggerData = fs.readFileSync(swaggerFile, 'utf8');
 const swaggerDocument = JSON.parse(swaggerData);
 

@@ -1,5 +1,5 @@
 [functions]
-  external_node_modules = ["express", "firebase", "firebase-admin", "dotenv", "serverless-http", "swagger-jsdoc", "swagger-ui-express"]
+  external_node_modules = ["express", "firebase", "dotenv", "serverless-http", "swagger-jsdoc", "swagger-ui-express"]
   node_bundler = "esbuild"
 
 [[redirects]]
@@ -9,4 +9,4 @@
   to = "/.netlify/functions/api/:splat"
 
 [build]
-  command = "npm run build"
+  command = "echo Building Functions"
