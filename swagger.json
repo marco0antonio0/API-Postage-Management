@@ -1,0 +1,19 @@
+{
+    "swaggerDefinition": {
+        "openapi": "3.0.0",
+        "info": {
+            "title": "API de Gerenciamento de Posts",
+            "version": "1.0.0",
+            "description": "API para criar, ler, atualizar e deletar posts"
+        },
+        "servers": [
+            {
+                "url": "http://localhost:3000",
+                "description": "Servidor de Desenvolvimento"
+            }
+        ]
+    },
+    "apis": [
+        "./app/**/*.ts"
+    ]
+}
