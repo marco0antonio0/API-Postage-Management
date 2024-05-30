@@ -207,4 +207,4 @@ Contribuições são bem-vindas! Por favor, siga os passos abaixo para contribui
 
 ## Licença
 
-Este projeto é licenciado sob a licença. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Este projeto é licenciado sob a licença. Veja o arquivo [LICENSE](https://github.com/marco0antonio0/API-Postage-Management) para mais detalhes.
